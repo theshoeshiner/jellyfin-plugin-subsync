@@ -8,35 +8,8 @@
     <div id="SubsyncConfigPage" data-role="page" class="page type-interior pluginConfigurationPage" data-require="emby-input,emby-button,emby-select,emby-checkbox">
         <div data-role="content">
             <div class="content-primary">
-
                 <form id="SubsyncConfigForm">
-<!--
-                    <div class="selectContainer">
-                        <label class="selectLabel" for="Options">Several Options</label>
-                        <select is="emby-select" id="Options" name="Options" class="emby-select-withcolor emby-select">
-                            <option id="optOneOption" value="OneOption">One Option</option>
-                            <option id="optAnotherOption" value="AnotherOption">Another Option</option>
-                        </select>
-                    </div>
                     <div class="inputContainer">
-                        <label class="inputLabel inputLabelUnfocused" for="AnInteger">An Integer</label>
-                        <input id="AnInteger" name="AnInteger" type="number" is="emby-input" min="0" />
-                        <div class="fieldDescription">A Description</div>
-                    </div>
-                    <div class="checkboxContainer checkboxContainer-withDescription">
-                        <label class="emby-checkbox-label">
-                            <input id="TrueFalseSetting" name="TrueFalseCheckBox" type="checkbox" is="emby-checkbox" />
-                            <span>A Checkbox</span>
-                        </label>
-                    </div>
-                    <div class="inputContainer">
-                        <label class="inputLabel inputLabelUnfocused" for="AString">A String</label>
-                        <input id="AString" name="AString" type="text" is="emby-input" />
-                        <div class="fieldDescription">Another Description</div>
-                    </div>-->
-
-                    <div class="inputContainer">
-
                         <div style="display: flex; align-items: center;">
                             <div style="flex-grow:1;">
                                 <label class="inputLabel inputLabelUnfocused" for="SubSyncPath">SubSync Path:</label>
@@ -44,11 +17,7 @@
                             </div>
                             <button type="button" is="paper-icon-button-light" id="SubSyncPathSearch" class="emby-input-iconbutton paper-icon-button-light"><span class="material-icons search" aria-hidden="true"></span></button>
                         </div>
-
-                       <!-- <label class="inputLabel inputLabelUnfocused" for="SubSyncPath">SubSync Path</label>
-                        <input id="SubSyncPath" name="SubSyncPath" type="text" is="emby-input" />-->
                         <div class="fieldDescription">Path to the SubSync executable</div>
-                     
                     </div>
                     <div>
                         <button is="emby-button" type="submit" class="raised button-submit block emby-button">
@@ -60,48 +29,6 @@
         </div>
         <script type="text/javascript">
 
-            //console.log("js for plugin!!!!!!!!!!!!!!");
-
-            //console.log("page: " + page);
-            //console.log("document: " + document);
-
-/*
-            $(document).on('pageinit', '#SubsyncConfigPage', function () {
-                const page = this;
-                console.log("page: " + page);
-
-                import('../../components/directorybrowser/directorybrowser').then(({ default: DirectoryBrowser }) => {
-                    const picker = new DirectoryBrowser();
-                    picker.show({
-                        includeFiles: true,
-                        callback: function (path) {
-                            if (path) {
-                                $('#SubSyncPath', page).val(path);
-                            }
-
-                            picker.close();
-                        }
-                    });
-                });
-
-            });*/
-
-           /* $('#SubSyncPathSearch', document).on('click.selectDirectory', function () {
-                console.log("clicked");
-                import('../../components/directorybrowser/directorybrowser').then(({ default: DirectoryBrowser }) => {
-                    const picker = new DirectoryBrowser();
-                    picker.show({
-                        includeFiles: true,
-                        callback: function (path) {
-                            if (path) {
-                                $('#SubSyncPath', page).val(path);
-                            }
-
-                            picker.close();
-                        }
-                    });
-                });
-            });*/
 
             var SubsyncConfig = {
                 pluginUniqueId: 'D17B7DA2-F00F-4073-8E2D-F05F8AF6CEB8'
@@ -109,15 +36,8 @@
 
             document.querySelector('#SubsyncConfigPage')
                 .addEventListener('pageshow', function () {
-
-                   
-
                     Dashboard.showLoadingMsg();
                     ApiClient.getPluginConfiguration(SubsyncConfig.pluginUniqueId).then(function (config) {
-                        //document.querySelector('#Options').value = config.Options;
-                        //document.querySelector('#AnInteger').value = config.AnInteger;
-                        //document.querySelector('#TrueFalseSetting').checked = config.TrueFalseSetting;
-                        //document.querySelector('#AString').value = config.AString;
                         document.querySelector('#SubSyncPath').value = config.SubSyncPath;
                         Dashboard.hideLoadingMsg();
                     });
@@ -125,21 +45,9 @@
 
             document.querySelector('#SubsyncConfigForm')
                 .addEventListener('submit', function (e) {
-
-
-
-                  /*  import('../../components/directorybrowser/directorybrowser').then(({ default: DirectoryBrowser }) => {
-                        console.log("loaded directory browswer");
-                    });*/
-
                     Dashboard.showLoadingMsg();
                     ApiClient.getPluginConfiguration(SubsyncConfig.pluginUniqueId).then(function (config) {
-                        //config.Options = document.querySelector('#Options').value;
-                        //config.AnInteger = document.querySelector('#AnInteger').value;
-                        //config.TrueFalseSetting = document.querySelector('#TrueFalseSetting').checked;
-                        //config.AString = document.querySelector('#AString').value;
                         config.SubSyncPath = document.querySelector('#SubSyncPath').value;
-
                         ApiClient.updatePluginConfiguration(SubsyncConfig.pluginUniqueId, config).then(function (result) {
                             Dashboard.processPluginConfigurationUpdateResult(result);
                         });
