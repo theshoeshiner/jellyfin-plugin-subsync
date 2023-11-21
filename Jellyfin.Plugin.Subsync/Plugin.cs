@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Jellyfin.Plugin.Subsync.Configuration;
+using Jellyfin.Plugin.Subsyncr.Configuration;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Plugins;
 using MediaBrowser.Model.Serialization;
 
-namespace Jellyfin.Plugin.Subsync;
+namespace Jellyfin.Plugin.Subsyncr;
 
 /// <summary>
 /// The main plugin.
@@ -26,7 +26,7 @@ public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages
     }
 
     /// <inheritdoc />
-    public override string Name => "Subsync'r";
+    public override string Name => "Subsyncr";
 
     /// <inheritdoc />
     public override Guid Id => Guid.Parse("D17B7DA2-F00F-4073-8E2D-F05F8AF6CEB8");

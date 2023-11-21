@@ -1,0 +1,20 @@
+[
+    {
+        "category": "Metadata",
+        "guid": "D17B7DA2-F00F-4073-8E2D-F05F8AF6CEB8",
+        "name": "SubSyncr",
+        "description": "This plugin integrates with SubSync to synchronize subtitles with media files.",
+        "owner": "jellyfin",
+        "overview": "Synchronize subtitles with SubSync",
+        "versions": [
+            {
+                "checksum": "ad6db5175f4732308b5dd166f79a1c2d",
+                "changelog": "Initial Pre-Release",
+                "targetAbi": "10.8.0.0",
+                "sourceUrl": "https://repo.jellyfin.org/releases/other/whats-this-plugin.zip.gif",
+                "timestamp": "2020-03-27 06:02:58",
+                "version": "0.1.0.0"
+            }
+        ]
+    }
+]
