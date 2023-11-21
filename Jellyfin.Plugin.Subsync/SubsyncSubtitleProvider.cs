@@ -55,13 +55,13 @@ namespace Jellyfin.Plugin.Subsync
             var index = int.Parse(parts[1]);
 
             var item = manager.GetItemsResult(new InternalItemsQuery
-            {ItemIds = new Guid[] { Guid.Parse(parts[0]) } }).Items[0];
+            { ItemIds = new Guid[] { Guid.Parse(parts[0]) } }).Items[0];
 
             var subtitle = item.GetMediaStreams()[index];
 
             var backupPath = subtitle.Path + ".original";
 
-            for (int i = 0; File.Exists(backupPath); i++)
+            for (var i = 0; File.Exists(backupPath); i++)
             {
                 backupPath = Path.ChangeExtension(backupPath, "original" + i);
             }
@@ -147,7 +147,7 @@ namespace Jellyfin.Plugin.Subsync
         private void RunSubSync(BaseItem item, MediaStream stream, string inputPath, string outputPath)
         {
 
-            PluginConfiguration config = Plugin.Instance!.Configuration;
+            var config = Plugin.Instance!.Configuration;
             var subSyncExePath = config.SubSyncPath;
             if (File.GetAttributes(subSyncExePath).HasFlag(FileAttributes.Directory))
             {
@@ -171,7 +171,7 @@ namespace Jellyfin.Plugin.Subsync
                 " --verbose 3" +
                 " --overwrite";
 
-            ProcessStartInfo p = new ProcessStartInfo(subSyncExePath,args);
+            var p = new ProcessStartInfo(subSyncExePath, args);
             p.UseShellExecute = false;
             p.RedirectStandardError = true;
             p.RedirectStandardOutput = true;
@@ -201,9 +201,9 @@ namespace Jellyfin.Plugin.Subsync
                 process.BeginErrorReadLine();
                 process.BeginOutputReadLine();*/
 
-                string error = process.StandardError.ReadToEnd();
-                string output = process.StandardOutput.ReadToEnd();
-                
+                var error = process.StandardError.ReadToEnd();
+                var output = process.StandardOutput.ReadToEnd();
+
                 logger.LogDebug("output: {0}", output);
                 logger.LogDebug("error: {0}", error);
 
