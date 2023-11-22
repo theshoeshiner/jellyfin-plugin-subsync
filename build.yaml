@@ -5,11 +5,10 @@ version: "0.1.0.0"
 targetAbi: "10.8.0.0"
 framework: "net6.0"
 overview: "Synchronize subtitles with SubSync"
-description: >
-  This plugin integrates with SubSync to synchronize subtitles with media files.
+description: "This plugin integrates with SubSync to synchronize subtitles with media files."
 category: "Metadata"
 owner: "theshoeshiner"
 artifacts:
 - "Jellyfin.Plugin.SubSync.dll"
 changelog: >
-  changelog
+  pre release
