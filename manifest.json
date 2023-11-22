@@ -9,12 +9,21 @@
         "imageUrl": "https://raw.githubusercontent.com/theshoeshiner/jellyfin-plugin-subsync/main/logo.png",
         "versions": [
             {
-                "checksum": "ad6db5175f4732308b5dd166f79a1c2d",
+            	"version": "0.1.0.0-alpha",
+            	"targetAbi": "10.8.0.0",
                 "changelog": "https://github.com/theshoeshiner/jellyfin-plugin-subsync/raw/main/CHANGELOG.md",
+                "checksum": "",
+                "sourceUrl": "",
+                "timestamp": ""
+                
+            },
+            {
+                "version": "0.1.0.1",
                 "targetAbi": "10.8.0.0",
-                "sourceUrl": "https://repo.jellyfin.org/releases/other/whats-this-plugin.zip.gif",
-                "timestamp": "2020-03-27 06:02:58",
-                "version": "0.1.0.0"
+                "changelog": "https://github.com/theshoeshiner/jellyfin-plugin-subsync/raw/main/CHANGELOG.md",
+                "checksum": "",
+                "sourceUrl": "",
+                "timestamp": ""
             }
         ]
     }
