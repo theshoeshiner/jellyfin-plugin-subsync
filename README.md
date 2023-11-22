@@ -18,10 +18,5 @@ Manifest is up an running! You can now import the manifest in Jellyfin and this 
 
 ## General Config
 
-### To Addresses:
-- Recipients of the newsletter. Add add as many emails as you'd like, separated by commas.
-    - All emails will be sent out via BCC
-
-### From Address
-- The address recipients will see on emails as the sender
-    - Defaults to JellyfinNewsletter@donotreply.com
+### SubSync Path:
+- The path to the SubSync executable (or the directory which contains it, in which case subsync.exe will be used as the executable name).
