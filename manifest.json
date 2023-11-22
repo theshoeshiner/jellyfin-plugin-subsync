@@ -2,7 +2,7 @@
     {
         "category": "Metadata",
         "guid": "D17B7DA2-F00F-4073-8E2D-F05F8AF6CEB8",
-        "name": "SubSyncr",
+        "name": "SubSync",
         "description": "This plugin integrates with SubSync to synchronize subtitles with media files.",
         "owner": "jellyfin",
         "overview": "Synchronize subtitles with SubSync",
