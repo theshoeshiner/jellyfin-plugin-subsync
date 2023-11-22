@@ -10,5 +10,4 @@ category: "Metadata"
 owner: "theshoeshiner"
 artifacts:
 - "Jellyfin.Plugin.SubSync.dll"
-changelog: >
-  pre release
+changelog: "https://github.com/theshoeshiner/jellyfin-plugin-subsync/raw/main/CHANGELOG.md"
