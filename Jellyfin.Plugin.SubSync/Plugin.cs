@@ -26,7 +26,7 @@ public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages
     }
 
     /// <inheritdoc />
-    public override string Name => "Subsyncr";
+    public override string Name => "SubSync";
 
     /// <inheritdoc />
     public override Guid Id => Guid.Parse("D17B7DA2-F00F-4073-8E2D-F05F8AF6CEB8");
