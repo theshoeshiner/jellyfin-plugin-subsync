@@ -21,7 +21,7 @@ using MediaBrowser.Model.Querying;
 using Microsoft.Extensions.Logging;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace Jellyfin.Plugin.Subsync
+namespace Jellyfin.Plugin.SubSync
 {
 
     public class SubsyncSubtitleProvider : ISubtitleProvider

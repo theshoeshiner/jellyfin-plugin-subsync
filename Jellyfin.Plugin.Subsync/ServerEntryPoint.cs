@@ -14,7 +14,7 @@ using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace Jellyfin.Plugin.Subsync
+namespace Jellyfin.Plugin.SubSync
 {
     internal class ServerEntryPoint : IServerEntryPoint
     {

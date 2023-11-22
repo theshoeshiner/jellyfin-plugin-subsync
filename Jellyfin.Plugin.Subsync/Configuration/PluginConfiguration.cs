@@ -1,6 +1,6 @@
 using MediaBrowser.Model.Plugins;
 
-namespace Jellyfin.Plugin.Subsync.Configuration;
+namespace Jellyfin.Plugin.SubSync.Configuration;
 
 /// <summary>
 /// Plugin configuration.

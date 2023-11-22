@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Jellyfin.Plugin.Subsync.Configuration;
+using Jellyfin.Plugin.SubSync.Configuration;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Plugins;
 using MediaBrowser.Model.Serialization;
 
-namespace Jellyfin.Plugin.Subsync;
+namespace Jellyfin.Plugin.SubSync;
 
 /// <summary>
 /// The main plugin.
