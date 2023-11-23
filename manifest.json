@@ -38,8 +38,8 @@
                 "targetAbi": "10.8.0.0",
                 "changelog": "https://github.com/theshoeshiner/jellyfin-plugin-subsync/raw/main/CHANGELOG.md",
                 "sourceUrl": "https://github.com/theshoeshiner/jellyfin-plugin-subsync/releases/download/0.1.0.3/subsync_0.1.0.3.zip",
-                "checksum": "",
-                "timestamp": "2023-11-23T11:05:00Z"
+                "checksum": "c104eb14e4e2d3da889556cf1c8d478b",
+                "timestamp": "2023-11-23T11:36:00Z"
             }
 			
         ]
