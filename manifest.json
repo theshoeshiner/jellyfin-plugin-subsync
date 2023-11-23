@@ -24,7 +24,16 @@
                 "checksum": "00f08453a1b720110247a1dc3333a9b2",
                 "sourceUrl": "https://github.com/theshoeshiner/jellyfin-plugin-subsync/releases/download/0.1.0.1/SubSync-v0.1.0.1.zip",
                 "timestamp": "2023-11-22T16:03:00Z"
+            },
+			{
+                "version": "0.1.0.2",
+                "targetAbi": "10.8.0.0",
+                "changelog": "https://github.com/theshoeshiner/jellyfin-plugin-subsync/raw/main/CHANGELOG.md",
+                "checksum": "e4aca18ab00ab4eff9dfa39c336423df",
+                "sourceUrl": "https://github.com/theshoeshiner/jellyfin-plugin-subsync/releases/download/0.1.0.2/subsync_0.1.0.2.zip",
+                "timestamp": "2023-11-23T11:05:00Z"
             }
+			
         ]
     }
 ]
